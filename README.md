@@ -34,3 +34,16 @@ It will install `pylint` and `black` to enable linting and auto-formatting.
     python -m pip install -U pip setuptools
     pip install -r requirements.txt
     python app.py
+
+<hr>
+
+<sup>
+
+## Credits
+
+- [Icon][1] by [Rakhmat Setiawan][2]
+
+</sup>
+
+[1]: https://www.iconfinder.com/icons/3059893/find_magnifier_search_seo_word_icon
+[2]: https://www.iconfinder.com/rsetiawan93
