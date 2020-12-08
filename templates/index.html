@@ -27,7 +27,7 @@
           ez-address-parser-demo
         </h1>
         <p class="lead">
-          A Python application to do something amazing
+          A Python application to demo ez-address-parser
         </p>
         <hr class="my-4" />
         <p>
@@ -37,7 +37,28 @@
       </div>
     </div>
     <div class="container">
-      {% include 'some_form.html' %}
+      {% include 'address_form.html' %}
+      {% if result %}
+        <div class="alert alert-success" style="margin-top: 1rem" role="alert">
+          <h4 class="alert-heading">Here is the breakdown of your address</h4>
+        </div>
+        <table class="table table-striped table-bordered">
+            <thead>
+              <tr>
+                <th>Part</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for part, label in result%}
+                <tr>
+                  <td>{{ part }}</td>
+                  <td>{{ label }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+      {% endif %}
     </div>
   </div>
   <footer class="footer" style="padding: 1rem">
