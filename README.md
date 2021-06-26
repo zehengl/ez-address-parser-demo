@@ -4,7 +4,7 @@
 
 ## Environment
 
-- Python 3.9.4
+- Python 3.9
 
 ## Usage
 
