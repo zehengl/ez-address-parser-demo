@@ -1,69 +1,72 @@
 {% extends "bootstrap/base.html" %}
 
+<!-- head -->
 {% block head %}
-  {{ super() }}
-  <link
-    rel="shortcut icon"
-    href="{{ url_for('static', filename='favicon.png') }}"
-  />
+<!-- super() -->
+{{ super() }}
+<link
+  rel="shortcut icon"
+  href="{{ url_for('static', filename='favicon.png') }}"
+/>
 {% endblock %}
 
+<!-- title -->
 {% block title %} ez-address-parser-demo {% endblock %}
 
+<!-- content -->
 {% block content %}
-  <div style="display: flex; min-height:100vh; flex-direction:column; flex: 1">
-    <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-4">
-          <span>
-            <img
-              src="{{ url_for('static', filename='favicon.png') }}"
-              width="64"
-              height="64"
-            />
-          </span>
-          ez-address-parser-demo
-        </h1>
-        <p class="lead">
-          A Python application to demo ez-address-parser
-        </p>
-        <hr class="my-4" />
-        <p>
-          Check out the source code at
-          <a href="https://github.com/zehengl/ez-address-parser">ez-address-parser</a>
-        </p>
-      </div>
-    </div>
-    <div class="container">
-      {% include 'address_form.html' %}
-      {% if result %}
-        <div class="alert alert-success" style="margin-top: 1rem" role="alert">
-          <h4 class="alert-heading">Here is the breakdown of your address</h4>
-        </div>
-        <table class="table table-striped table-bordered">
-            <thead>
-              <tr>
-                <th>Part</th>
-                <th>Label</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for part, label in result%}
-                <tr>
-                  <td>{{ part }}</td>
-                  <td>{{ label }}</td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-      {% endif %}
+<div style="display: flex; min-height: 100vh; flex-direction: column; flex: 1">
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">
+        <span>
+          <img
+            src="{{ url_for('static', filename='favicon.png') }}"
+            width="64"
+            height="64"
+          />
+        </span>
+        ez-address-parser-demo
+      </h1>
+      <p class="lead">A Python application to demo ez-address-parser</p>
+      <hr class="my-4" />
+      <p>
+        Check out the source code at
+        <a href="https://github.com/zehengl/ez-address-parser"
+          >ez-address-parser
+        </a>
+      </p>
     </div>
   </div>
-  <footer class="footer" style="padding: 1rem">
-    <div class="container">
-      <span class="text-muted">
-        &copy; Copyright 2020 by Zeheng Li
-      </span>
+  <div class="container">
+    {% include 'address_form.html' %}
+    <!-- result-->
+    {% if result %}
+    <div class="alert alert-success" style="margin-top: 1rem" role="alert">
+      <h4 class="alert-heading">Here is the breakdown of your address</h4>
     </div>
-  </footer>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Part</th>
+          <th>Label</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for part, label in result%}
+        <tr>
+          <td>{{ part }}</td>
+          <td>{{ label }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endif %}
+  </div>
+</div>
+<footer class="footer" style="padding: 1rem">
+  <div class="container">
+    <span class="text-muted"> &copy; Copyright 2020 by Zeheng Li </span>
+  </div>
+</footer>
 {% endblock %}
