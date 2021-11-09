@@ -20,7 +20,7 @@ ap = AddressParser()
 def index():
     form = AddressForm(request.form)
 
-    result = ap.parse(form.address.data or "")
+    result = ap.parse(form.address.data)
 
     return render_template("index.html", form=form, result=result)
 

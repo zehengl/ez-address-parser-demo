@@ -4,5 +4,5 @@ from wtforms.validators import DataRequired
 
 
 class AddressForm(FlaskForm):
-    address = StringField("Address", validators=[DataRequired()])
+    address = StringField("Address", default="", validators=[DataRequired()])
     submit = SubmitField("Submit")
