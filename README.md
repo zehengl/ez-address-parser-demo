@@ -29,8 +29,8 @@ It will install `pylint` and `black` to enable linting and auto-formatting.
 
 ### Linux
 
-    python -m venv venv
-    source venv/bin/activate
+    python -m venv .venv
+    source .venv/bin/activate
     python -m pip install -U pip setuptools
     pip install -r requirements.txt
     python app.py
