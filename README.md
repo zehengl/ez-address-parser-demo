@@ -10,7 +10,7 @@
 
 1. create virtualenv
 2. activate virtualenv
-3. update pip and setuptools
+3. update pip
 4. install deps
 5. run the python app
 
@@ -22,7 +22,7 @@
 
     python -m venv venv
     .\venv\Scripts\activate
-    python -m pip install -U pip setuptools
+    python -m pip install -U pip
     pip install -r requirements.txt
     python app.py
 
@@ -30,7 +30,7 @@
 
     python -m venv .venv
     source .venv/bin/activate
-    python -m pip install -U pip setuptools
+    python -m pip install -U pip
     pip install -r requirements.txt
     python app.py
 
