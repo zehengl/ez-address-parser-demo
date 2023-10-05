@@ -14,8 +14,7 @@
 4. install deps
 5. run the python app
 
-Use `pip install -r requirements-dev.txt` for development.
-It will install `pylint` and `black` to enable linting and auto-formatting.
+> Use `pip install -r requirements-dev.txt` for development.
 
 ## Example
 
