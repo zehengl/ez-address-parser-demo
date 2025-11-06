@@ -33,10 +33,3 @@
     python -m pip install -U pip
     pip install -r requirements.txt
     python app.py
-
-## Credits
-
-- [Icon][1] by [Rakhmat Setiawan][2]
-
-[1]: https://www.iconfinder.com/icons/3059893/find_magnifier_search_seo_word_icon
-[2]: https://www.iconfinder.com/rsetiawan93
